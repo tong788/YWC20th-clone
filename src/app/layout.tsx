@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import { Prompt } from "next/font/google";
 import Navbar from "./components/Navbar";
+import Footerbar from "./components/FooterBar";
+
+const prompt = Prompt({
+  subsets: ["latin", "thai"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "YWC20th clone",
@@ -14,10 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={prompt.className}>
       <body className="bg-[#20010d] text-white">
         <Navbar />
         <main>{children}</main>
+        <Footerbar/>
       </body>
     </html>
   );
