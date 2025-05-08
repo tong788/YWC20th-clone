@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import { DepartmentData } from "@/app/api/Department";
+import { DepartmentData } from "@/app/data/Department";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import RightArrowIcon from "@/app/icons/custom-right-arrow"
@@ -21,7 +21,7 @@ const Landing = () => {
 
   const router = useRouter()
 
-  const handleOnclick = () => {
+  const handleOnClick = () => {
     router.push("/announcement")
   };
 
@@ -41,7 +41,7 @@ const Landing = () => {
         <div className="mt-4">ผลการคัดเลือกเข้ารอบสัมภาษณ์ได้ถูกประกาศแล้ว</div>
 
         <button
-          onClick={handleOnclick}
+          onClick={handleOnClick}
           className="mt-4 cursor-pointer bg-linear-to-r from-[#FD1D1D] to-[#FCB045] w-64 h-12 rounded-lg"
         >
           ดูผลการคัดเลือกเข้ารอบสัมภาษณ์
