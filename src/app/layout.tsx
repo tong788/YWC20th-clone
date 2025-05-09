@@ -23,9 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={prompt.className}>
-      <body className="bg-[#20010d] text-white">
+      <body className="bg-[#20010d] text-white min-h-screen flex flex-col">
         <Navbar />
-        <main>{children}</main>
+        <main className="flex-grow flex items-center justify-center">{children}</main>
         <Footerbar/>
       </body>
     </html>

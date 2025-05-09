@@ -22,7 +22,7 @@ const Landing = () => {
   const router = useRouter()
 
   const handleOnClick = () => {
-    router.push("/announcement")
+    router.push("/result")
   };
 
     return (
@@ -42,16 +42,16 @@ const Landing = () => {
 
         <button
           onClick={handleOnClick}
-          className="mt-4 cursor-pointer bg-linear-to-r from-[#FD1D1D] to-[#FCB045] w-64 h-12 rounded-lg"
+          className="mt-4 cursor-pointer bg-linear-to-r from-[#FD1D1D] to-[#FCB045] w-64 h-12 rounded-lg hover:opacity-90 duration-100"
         >
           ดูผลการคัดเลือกเข้ารอบสัมภาษณ์
         </button>
 
         <div className="mt-8 text-2xl font-bold">
           <p className="mb-4 text-center">สาขาที่รับสมัคร</p>
-          <div className="w-xl flex flex-row justify-around items-center">
+          <div className="w-full flex flex-row justify-around items-center">
             <LeftArrowIcon
-              className="bg-white rounded-full cursor-pointer"
+              className="bg-white rounded-full cursor-pointer hover:opacity-90 duration-100 mr-8"
               onClick={handlePrevPage}
             />
             <div className="bg-linear-to-b from-[#DC2424] to-[#4A569D] rounded-4xl w-72 h-48 flex flex-col items-center justify-center">
@@ -65,7 +65,7 @@ const Landing = () => {
               <p>สมัครแล้ว {DepartmentData[indexPage].amount} คน</p>
             </div>
             <RightArrowIcon
-              className="bg-white rounded-full cursor-pointer"
+              className="bg-white rounded-full cursor-pointer hover:opacity-90 duration-100 ml-8"
               onClick={handleNextPage}
             />
           </div>

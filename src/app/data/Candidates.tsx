@@ -38,7 +38,6 @@ export const useGetCandidateData = (interviewRef: string = "PG07") => {
         }
 
         const data = await response.json();
-        // console.log("Raw API Response:", data); // Debug log
         
         setCandidates(data);
 

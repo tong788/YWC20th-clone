@@ -1,9 +1,9 @@
 import { useGetCandidateData } from "@/app/data/Candidates";
-// import { useRouter } from "next/navigation";
 import { Candidate } from "@/app/data/Candidates";
-import { useEffect } from "react";
 
+//อาจจะทำระบบกรอง
 const Announcement = () => {
+
   const { candidates, error, loading } = useGetCandidateData("PG07");
 
   // Flatten all candidates into a single array
@@ -16,12 +16,21 @@ const Announcement = () => {
       ]
     : [];
 
-  useEffect(() => {
-    console.log("All candidates:", allCandidates);
-  }, [candidates]);
+
+  if (error) {
+    return (
+      <div>
+        <p className="text-center text-red-500 mt-8">{error}</p>
+      </div>
+    );
+  }
 
   if (loading) {
-    return <div className="text-center">Loading</div>;
+    return (
+      <div>
+        <p className="text-center mt-8">Loading...</p>
+      </div>
+    );
   }
 
   return (
@@ -40,7 +49,6 @@ const Announcement = () => {
         ) : (
           <div className="text-center">
             No candidates found
-            {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
           </div>
         )}
       </div>
