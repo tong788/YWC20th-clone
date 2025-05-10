@@ -47,9 +47,9 @@ const ParticipantResult = () => {
 
   if (!participant) {
     return (
-      <div className="bg-gradient-to-b from-[#101010] to-[#120000] w-1/2 h-[70dvh] rounded-2xl flex flex-col justify-center items-center">
+      <div className="bg-gradient-to-b from-[#101010] to-[#120000] w-[50dvh] sm:w-[56dvh] md:w-[60dvh] h-[50dvh] sm:h-[60dvh] md:h-[64dvh] rounded-2xl flex flex-col justify-center items-center">
         <CustomLeftArrow
-          className="absolute left-6 top-20 bg-white rounded-full cursor-pointer hover:opacity-90 duration-100"
+          className="w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 absolute left-6 top-20 bg-white rounded-full cursor-pointer hover:opacity-90 duration-100"
           onClick={handleOnClick}
         />
         <Image
@@ -57,33 +57,32 @@ const ParticipantResult = () => {
           alt="user profile"
           width={150}
           height={150}
+          className="w-[110px] sm:w-[130px] md:w-[150px]"
         />
-        <div className="text-center font-semibold text-xl my-4">
+        <div className="text-center font-semibold text-base sm:text-lg md:text-xl my-4">
           <p>ขอแสดงความเสียใจกับ</p>
           <p>คุณ {fullName}</p>
         </div>
-        <div className="text-center font-semibold mt-4">
+        <div className="text-center font-semibold mt-4 text-xs sm:text-sm md:text-base">
           <p>ไม่ได้รับการคัดเลือกเข้าสู่รอบสัมภาษณ์</p>
           <p>Young Webmaster Camp 20</p>
         </div>
-        <div className="text-center text-sm mt-4">
+        <div className="text-center text-[0.625rem] sm:text-xs md:text-sm mt-4">
           <p>ผู้ที่ไม่ผ่านการคัดเลือกในรอบนี้ ไม่ใช่น้องไม่เก่งนะครับ</p>
           <p className="mb-2">
             แต่ทุกคนมีจังหวะและโอกาสที่ต่างกัน พี่ๆเป็นกำลังใจให้เสมอครับ
           </p>
-          <p>
-            รอติดตามข่าวสารการรับสมัครของค่าย Young Webmaster Camp
-            ในปีถัดๆไปกันไว้ได้เลย
-          </p>
+          <p>รอติดตามข่าวสารการรับสมัครของค่าย</p>
+          <p> Young Webmaster Camp ในปีถัดๆไปกันไว้ได้เลย</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-gradient-to-b from-[#101010] to-[#120000] w-1/2 h-[70dvh] rounded-2xl flex flex-col justify-center items-center">
+    <div className="bg-gradient-to-b from-[#101010] to-[#120000] w-[50dvh] sm:w-[56dvh] md:w-[60dvh] h-[50dvh] sm:h-[60dvh] md:h-[64dvh] rounded-2xl flex flex-col justify-center items-center">
       <CustomLeftArrow
-        className="absolute left-6 top-20 bg-white rounded-full cursor-pointer hover:opacity-90 duration-100"
+        className="w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 absolute left-6 top-20 bg-white rounded-full cursor-pointer hover:opacity-90 duration-100"
         onClick={handleOnClick}
       />
       <Image
@@ -91,18 +90,19 @@ const ParticipantResult = () => {
         alt="user profile"
         width={150}
         height={150}
+        className="w-[110px] sm:w-[130px] md:w-[150px]"
       />
-      <div className="text-center font-semibold text-xl my-4">
+      <div className="text-center font-semibold text-base sm:text-lg md:text-xl my-4">
         <p>ขอแสดงความยินดีกับ</p>
         <p>
           คุณ {participant.firstName} {participant.lastName}
         </p>
       </div>
-      <div className="text-center text-sm">
+      <div className="text-center text-[0.625rem] sm:text-xs md:text-sm">
         <p>เลขประจำตัวผู้เข้าสัมภาษณ์: {participant.interviewRefNo}</p>
         <p>รอบสัมภาษณ์: เช้า 9.00-12.00</p>
       </div>
-      <div className="text-center font-semibold mt-4">
+      <div className="text-center font-semibold mt-4 text-xs sm:text-sm md:text-base">
         <p>ผ่านเข้ารอบสัมภาษณ์ สาขา {participant.major}🎉</p>
         <p>Young Webmaster Camp 20</p>
       </div>

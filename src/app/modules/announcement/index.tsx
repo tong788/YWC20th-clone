@@ -34,9 +34,9 @@ const Announcement = () => {
   }
 
   return (
-    <div className="mt-8 flex flex-col items-center">
-      <div className="w-full max-w-2xl mt-4 px-4">
-        <p className="text-center font-bold text-xl mb-4">Congratulations to all candidates</p>
+    <div className="mt-4 sm:mt-8 mb-4 flex flex-col items-center">
+      <div className="text-sm sm:text-base w-full max-w-2xl mt-4 px-4">
+        <p className="text-center font-bold text-base sm:text-lg md:text-xl mb-4">ขอแสดงความยินดีกับผู้ที่ผ่านเข้ารอบสัมภาษณ์</p>
         {allCandidates.length > 0 ? (
           allCandidates.map((candidate) => (
             <div
